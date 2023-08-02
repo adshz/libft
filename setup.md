@@ -56,7 +56,7 @@ alright
 
 Step 4: create a Makefile via `vim libft.h` under the same direcotry outside `libftTester`
 
-After `vim Makefile` copy and paste the code below
+Step 5: `vim Makefile` copy and paste the code below
 
 ```
 NAME :=        libft.a
