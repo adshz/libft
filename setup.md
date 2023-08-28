@@ -2,7 +2,7 @@
 
 > Massively thank you Emily(emflynn) for guiding me through setting up tester and walked me together through the process of writing own code and test it.
 
-Step 1: clone the tester repo
+### Step 1: clone the tester repo
 
 First, you can open terminal to `cd` the one folder you want to clone the repo.
 
@@ -15,7 +15,7 @@ let's have a look at what files are there.
 we have files: `Dockerfile`, `Makefile` , `README.md` + two folders - `tests`, `utils`
 
 ![files under `tests` folder](https://i.imgur.com/9oHgdJr.png)
-Step 2: create a file to test
+### Step 2: create a file to test
 
 you can create a file `ft_strlen.c` outside the folder `libftTester` but under the same directory ( in my case it's called `libft` as the folder to be submitted)
 
@@ -35,7 +35,7 @@ int    ft_strlen(char *str)
 
 then, you can type `wq` to save and exit
 
-Step 3: create the header file `libft.h`
+### Step 3: create the header file `libft.h`
 
 inside the `libft.h`
 
@@ -92,7 +92,7 @@ re:            fclean all
 
 Note: it may not work because when you copy and paste code into Makefile, tab can be converted into space, so what you need to fix is to tidy up them from space to tab
 
-Step 5: install `clang` (gcc compiler) and `valgrind` (this is for checking memory leak)
+### Step 5: install `clang` (gcc compiler) and `valgrind` (this is for checking memory leak)
 
 ![clang](https://i.imgur.com/8Ftnz14.png)
 
@@ -105,7 +105,7 @@ if you're in linux environment, you can use this code to install valgrind
 
 once you done it, you can start to test your code
 
-Step 6: Use libftTeser
+### Step 6: Use libftTeser
 
 `cd libftTeste`
 
