@@ -43,7 +43,7 @@ then, you can type `wq` to save and exit
 
 inside the `libft.h`
 
-you can copy and paste code below. ( I asked chatGPT about what the header file in C is. See [link](https://chat.openai.com/share/610dd2ce-f07a-425f-9c89-56d2b0c70cac)
+you can copy and paste code below in this file `libft.h` ( I asked chatGPT about what the header file in C is. See [link](https://chat.openai.com/share/610dd2ce-f07a-425f-9c89-56d2b0c70cac)
 
 ```
 #ifndef LIBFT_H
@@ -54,12 +54,12 @@ int        ft_strlen(char *str);
 #endif
 ```
 
-in this file, whenever you create a new `.c` file, remember to propotype the function here. for example, you can go back to the step 2 to create a file called `ft_isalpha.c` and then you can come back to here to insert a line of code ` int ft_isalpha(int c)` under `int ft_strlen(char *str)` before `#endif`
+Whenever you create a new `.c` file, please remember to propotype the function here. for example, you can go back to the step 2 to create a file called `ft_isalpha.c` and then you can come back to here to insert a line of code ` int ft_isalpha(int c)` under `int ft_strlen(char *str)` before `#endif`
+
+![workflow](https://i.imgur.com/WjQkob8.png)
 
 
-### Step 4: create a Makefile via `vim libft.h` under the same direcotry outside `libftTester`
-
-Step 5: `vim Makefile` copy and paste the code below
+### Step 4: `vim Makefile` copy and paste the code below
 
 ```
 NAME :=        libft.a
@@ -93,7 +93,8 @@ re:            fclean all
 
 ```
 
-Note: it may not work because when you copy and paste code into Makefile, tab can be converted into space, so what you need to fix is to tidy up them from space to tab
+> Note: it may not work because when you copy and paste code into Makefile,
+> tab can be converted into space, so what you need to fix is to tidy up them from space to tab
 
 ### Step 5: install `clang` (gcc compiler) and `valgrind` (this is for checking memory leak)
 
