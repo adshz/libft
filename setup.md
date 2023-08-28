@@ -4,20 +4,24 @@
 
 ### Step 1: clone the tester repo
 
-First, you can open terminal to `cd` the one folder you want to clone the repo.
+First, you can open terminal and type the command `cd`  to change your directory to the one directory you want to clone the entire repo "LibftTester". If you haven't created, you should create a file called `Libft` as the one you will be working in your C library for the first part of common core. 
+
+Suppose you are in the directory you want to work for the common core, and you can clone the repo with the command `git clone` and the link with github repo of LibftTester.
 
 ```
 git clone https://github.com/Tripouille/libftTester
 ```
+> Optional part, you can skip to the step 2
 
-let's have a look at what files are there.
-
-we have files: `Dockerfile`, `Makefile` , `README.md` + two folders - `tests`, `utils`
+let's have a look at what files are there. We have files: `Dockerfile`, `Makefile` , `README.md` + two folders - `tests`, `utils`
 
 ![files under `tests` folder](https://i.imgur.com/9oHgdJr.png)
+
+
 ### Step 2: create a file to test
 
-you can create a file `ft_strlen.c` outside the folder `libftTester` but under the same directory ( in my case it's called `libft` as the folder to be submitted)
+We need to know about how to use LibftTester and what the workflow is. The best to know is to learn by doing. Hence we are going to create a test file where we  write some C code. Under the same directory of `libft` as the directory of `libftTeste`, you can create a file `ft_strlen.c` outside the folder `libftTester` 
+Notice: `ft_strlen.c` and `libftTester` are all under the same directory ( in my case it's called `libft` as the folder to be submitted)
 
 you can copy and paste code into the file `ft_strlen.c`
 
@@ -39,7 +43,7 @@ then, you can type `wq` to save and exit
 
 inside the `libft.h`
 
-you can copy and paste code below
+you can copy and paste code below. ( I asked chatGPT about what the header file in C is. See [link](https://chat.openai.com/share/610dd2ce-f07a-425f-9c89-56d2b0c70cac)
 
 ```
 #ifndef LIBFT_H
@@ -52,9 +56,8 @@ int        ft_strlen(char *str);
 
 in this file, whenever you create a new `.c` file, remember to propotype the function here. for example, you can go back to the step 2 to create a file called `ft_isalpha.c` and then you can come back to here to insert a line of code ` int ft_isalpha(int c)` under `int ft_strlen(char *str)` before `#endif`
 
-alright
 
-Step 4: create a Makefile via `vim libft.h` under the same direcotry outside `libftTester`
+### Step 4: create a Makefile via `vim libft.h` under the same direcotry outside `libftTester`
 
 Step 5: `vim Makefile` copy and paste the code below
 
