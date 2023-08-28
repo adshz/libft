@@ -123,7 +123,9 @@ see the attached pictue below
 
 ![ft_](https://i.imgur.com/DIiHwpm.png)
 
-## Use pip to install Norminette
+## Norminette
+
+### Use pip to install Norminette
 
 you can see if you have python install 
 
@@ -140,5 +142,39 @@ if you see the pathway output in the terminal you can install norminette `pip ns
 
 you can start to test it by `norminete ft_strlen` to see the familiar thing...
 
+## Your favourite 42 Header
 
+- [Source](https://github.com/42Paris/42header/tree/master)
 
+I am using a vim plugin manager [Vim Plugins Manager](https://github.com/junegunn/vim-plug)
+
+Step 1: Go to `~/.vimrc` to add the code below
+
+```
+let g:user42 = 'yourLogin'
+let g:mail42 = 'yourLogin@student.42.fr'
+```
+
+Step 2: Put the github username + repo in `~/.vimrc`
+
+I just put `Plug `42Paris/42header` in between `call plug#begin('~/.vim/plugged')` and `call plug#end()`; you need to learn how to use the plugin manger ,please check the repo [Vim Plugins Manager](https://github.com/junegunn/vim-plug)
+
+it looks like 
+
+```
+call plug#begin('~/.vim/plugged')
+
+Plug '42Paris/42header'
+
+call plug#end()
+```
+
+Then you save it by `w`
+
+Step 3: Update Plugins in Vim
+
+You type semi-colons `:` and then you type `PlugIn`; In the end, the command `:PlugIn` will lead you to the plugin manager.
+
+You type `PlugUpdate` and see the 42Paris is completed. So you can use your favourite header`
+
+![42Header](https://i.imgur.com/D8tt0KM.png)
