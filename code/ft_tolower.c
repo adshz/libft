@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 19:10:42 by szhong            #+#    #+#             */
-/*   Updated: 2023/09/12 15:04:49 by szhong           ###   ########.fr       */
+/*   Created: 2023/09/13 16:07:52 by szhong            #+#    #+#             */
+/*   Updated: 2023/09/13 16:11:28 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
-	int	result;
+	int	i;
 
-	result = 0;
-	if ((c >= 'A' && c <= 'Z'))
-		result = 1;
-	else if ((c >= 'a' && c <= 'z'))
-		result = 1;
-	return (result);
+	i = 65;
+	while (i < 91)
+	{
+		if (c == i)
+			c += 32;
+		i++;
+	}
+	return (c);
 }

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 19:10:42 by szhong            #+#    #+#             */
-/*   Updated: 2023/09/12 15:04:49 by szhong           ###   ########.fr       */
+/*   Created: 2023/09/12 16:33:59 by szhong            #+#    #+#             */
+/*   Updated: 2023/09/12 17:26:45 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_isalpha(int c)
+int	ft_isalnum(int c)
 {
 	int	result;
 
 	result = 0;
-	if ((c >= 'A' && c <= 'Z'))
+	if (c >= 'a' && c <= 'z')
 		result = 1;
-	else if ((c >= 'a' && c <= 'z'))
+	else if (c >= 'A' && c <= 'Z')
+		result = 1;
+	else if (c >= 48 && c <= 57)	
 		result = 1;
 	return (result);
 }

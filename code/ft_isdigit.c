@@ -1,25 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 19:10:42 by szhong            #+#    #+#             */
-/*   Updated: 2023/09/12 15:04:49 by szhong           ###   ########.fr       */
+/*   Created: 2023/09/12 15:07:08 by szhong            #+#    #+#             */
+/*   Updated: 2023/09/12 16:32:54 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <ctype.h>
 
-#include <unistd.h>
-
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
-	int	result;
+	unsigned int	i;
 
-	result = 0;
-	if ((c >= 'A' && c <= 'Z'))
-		result = 1;
-	else if ((c >= 'a' && c <= 'z'))
-		result = 1;
-	return (result);
+	i = 48;
+	while (i < 58)
+	{
+		if (i == (unsigned int) c)
+			return (1);
+		i++;
+	}
+	return (0);
+	
 }
+/*
+int	main()
+{
+	int	test = '9';
+	int	result;
+	int	ogResult;
+
+	result = ft_isdigit(test);
+	printf("%d\n", result);
+	ogResult = isdigit(test);	
+	printf("ogResult %d\n", ogResult);
+	if (result == 1)
+		printf("%s", "good go for a walk");
+	return (0);
+}*/

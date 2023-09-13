@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 19:10:42 by szhong            #+#    #+#             */
-/*   Updated: 2023/09/12 15:04:49 by szhong           ###   ########.fr       */
+/*   Created: 2023/09/13 15:46:22 by szhong            #+#    #+#             */
+/*   Updated: 2023/09/13 16:06:41 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	int	result;
+	char	i;
 
-	result = 0;
-	if ((c >= 'A' && c <= 'Z'))
-		result = 1;
-	else if ((c >= 'a' && c <= 'z'))
-		result = 1;
-	return (result);
+	i = 'a';
+	while (i <= 'z')
+	{
+		if (c == i)
+			c -= 32;
+		i++;
+	}
+	return (c);
 }
