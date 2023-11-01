@@ -6,7 +6,7 @@
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:07:08 by szhong            #+#    #+#             */
-/*   Updated: 2023/10/30 16:01:45 by szhong           ###   ########.fr       */
+/*   Updated: 2023/10/30 17:43:17 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -19,7 +19,7 @@ int	ft_isdigit(int c)
 	return (0);
 	
 }
-
+/*
 int	main()
 {
 	int	test = '1';
@@ -33,4 +33,4 @@ int	main()
 	if (result == 1)
 		printf("%s", "good go for a walk");
 	return (0);
-}
+}*/
