@@ -6,13 +6,13 @@
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:30:03 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/01 15:40:15 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/06 18:56:48 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-/*
+
 void *ft_memmove(void* dest, const void* src, size_t n) {
     char* d = (char*)dest;
     const char* s = (const char*)src;
@@ -37,7 +37,7 @@ void *ft_memmove(void* dest, const void* src, size_t n) {
 
     return dest;
 }
- I don't know why it is wrong. it can't pass the test
+/* I don't know why it is wrong. it can't pass the test
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const char	*s;
