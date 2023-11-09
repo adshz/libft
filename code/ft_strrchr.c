@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 21:57:06 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/08 14:42:42 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/08 14:50:27 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/08 15:44:45 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
-{
-	char	*src;
-	char	target;
-
-	src = (char *)s;
-	target = (char )c;
-	while (*src && *src != target)
-		src++;
-	if (*src == target)
-		return (src);
-	return (0);
-}
 /*
-// the problem with this function was the error
-// ft_strchr.c:38:32: error: return discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*src;
 	char	target;
+	int	len;
 
 	src = (char *)s;
 	target = (char )c;
-	while (*src && target != '\0')
+	len = ft_strlen(src);
+	if (target == 0)
+		return (src);
+	while (len >= 0 && *src)
 	{
-		if (*src == target)
-			return (const src);
-		src++;
+		if (*(src + len) == target)
+		       return (src + len);
+		len--;	
 	}
 	return (0);
 }*/
+char	*ft_strrchr(const char *s, int c)
+{
+	const char	*temp;
+
+	temp = NULL;
+	while (*s)
+	{
+		if (*s == (char )c)
+			temp = s;
+		s++;
+	}
+	if (*s == (char )c)
+		return (char *)s;
+	else 
+		return ((char *)temp);
+}
