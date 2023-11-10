@@ -6,7 +6,7 @@
 /*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:05:03 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/06 16:22:40 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/10 17:53:15 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,8 +15,14 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
+	if (str == NULL)
+	{
+		return (0);
+	}
 	i = 0;
 	while (str[i])
+	{
 		i++;
+	}
 	return (i);
 }
