@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 14:28:43 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/15 15:24:17 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/15 17:55:50 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/15 23:05:34 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+/*
+ *typedef struct s_list
+ {
+ 	void	*content;
+	struct s_list *next;
+ } t_list;
+ * */
+t_list	*ft_lstnew(void *content)
 {
-	char	*src;
-	char	target;
+	t_list	*node;
 
-	src = (char *)s;
-	target = (char )c;
-	while (*src && *src != target)
-		src++;
-	if (*src == target)
-		return (src);
-	return (0);
-}
+	node = malloc(sizeof(t_list));
+	if (node == NULL)
+		return (NULL);
+	node -> content = content;
+	node -> next = NULL;
+	return (node);
+}/*
+
+int	main()
+{
+//	char	s[] = "Hello world";
+	int	i = 567;
+	t_list	*node;
+
+	node = ft_lstnew(&i);
+	ft_putnbr_fd(*((int *)(node->content)), 1);
+}*/

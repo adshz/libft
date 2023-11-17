@@ -3,34 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
+/*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 16:46:57 by szhong            #+#    #+#             */
-/*   Updated: 2023/09/12 17:43:41 by szhong           ###   ########.fr       */
+/*   Created: 2023/10/30 17:52:46 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/08 11:25:45 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_isascii(int c)
 {
-	int	result;
-
-	result = 0;
-	if (c >= 0 && c <= 127)
-		result = 1;
-	return (result);	
+	if (c >= 0 && c <= 177)
+		return (1);
+	return (0);
 }
-/*
-int	main()
-{
-	int	test = 129;
-//	int	large_result = 129;
-	int	my_result = 0;
-	int	libc_result = 0;
-
-	my_result = ft_isascii(test);
-	libc_result = isascii(test);
-	printf("my result: %d\n", my_result);
-	printf("libc result: %d", libc_result);
-}*/

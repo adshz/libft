@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 15:28:56 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/15 16:22:35 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/15 10:14:18 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/15 16:55:30 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
-	size_t	j;
 
+	if (s == NULL)
+		return ;
 	i = 0;
-	if (*(needle) == '\0')
-		return ((char *)haystack);
-	while (*(haystack + i) != '\0' && i < n)
+	while (*(s + i) != '\0')
 	{
-		j = 0;
-		while (*(haystack + i + j) == *(needle + j) && \
-				i + j < n && *(haystack + i + j) != '\0')
-			j++;
-		if (*(needle + j) == '\0')
-			return ((char *)(haystack + i));
+		f(i, s + i);
 		i++;
 	}
-	return (0);
 }
+/*
+static void	upperCase(unsigned int i, char *s)
+{
+	if (i % 2 == 0)
+		s[i] = ft_toupper(s[i]);
+	else
+		s[i] = ft_tolower(s[i]);
+}
+
+int	main()
+{
+	char	s[] = "Happy New Year!";
+	void	(*f)(unsigned int, char*);
+
+	ft_putendl_fd(s, 1);
+	f = upperCase;
+	ft_putendl_fd("-----", 1);
+	ft_striteri(s, f); 
+	ft_putendl_fd(s, 1);
+}*/

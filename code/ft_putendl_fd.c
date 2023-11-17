@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 19:42:37 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/08 11:25:08 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/13 13:04:33 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/13 14:35:40 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
-}
+	if (!s || fd < 0)
+	{
+		return ;
+	}
+	else
+	{
+		write(fd, s, ft_strlen(s));
+		write(fd, "\n", 1);
+	}
+}/*
+int	main()
+{
+	char	*s = "Hello world";
+	char	*s1 = "42 school";
+	
+	int	fd = -3;
+	ft_putendl_fd(s, fd);
+	ft_putendl_fd(s1,fd);
+}*/

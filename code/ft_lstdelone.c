@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 19:42:37 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/08 11:25:08 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/17 20:34:57 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/17 20:55:30 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_toupper(int c)
+#include "libft.h"
+/*
+void	delone(void *lst)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	free(lst);
+}
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst == NULL)
+		return (NULL);
+	del(lst);
+}*/
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst == NULL || del == NULL)
+		return ;
+	del(lst->content);
+	free(lst);
 }

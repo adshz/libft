@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 19:42:37 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/08 11:25:08 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/15 21:59:49 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/17 19:42:26 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_toupper(int c)
+/*typedef struct s_list 
+ * {
+ *	void	*content;
+ *	struct s_list	*next;
+ * } t_list;
+ *
+ *
+ *
+ *  lst : address of a pointer to the first link of a list
+ * */
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+//	new -> content	==> int new_value;
+	if (!new)
+		return ;
+	if (!lst)
+	{
+		*lst = new;
+		return ;
+	}
+	new -> next = *lst;
+	*lst = new;
 }

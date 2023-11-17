@@ -3,49 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
+/*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 15:42:15 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/06 14:40:24 by szhong           ###   ########.fr       */
+/*   Created: 2023/11/06 14:34:37 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/15 17:33:11 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	const unsigned char	*ptr1;
-	const unsigned char	*ptr2;
-
-	ptr1 = s1;
-	ptr2 = s2;
-	while (n > 0)
-	{
-		if (*ptr1 < *ptr2)
-			return (-1);
-		else if (*ptr1 > *ptr2)
-			return (1);
-		ptr1++;
-		ptr2++;
-		n--;
-	}
-	return (0);	
-}*/
-
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*ptr1;
-	const unsigned char	*ptr2;
+	const unsigned char	*src1;
+	const unsigned char	*src2;
 
-	ptr1 = s1;
-	ptr2 = s2;
+	src1 = s1;
+	src2 = s2;
 	while (n > 0)
 	{
-		if (*ptr1 != *ptr2)
-		       return (*ptr1 - *ptr2);	
-		ptr1++;
-		ptr2++;
+		if (src1 != src2)
+			return (*src1 - *src2);
+		src1++;
+		src2++;
 		n--;
 	}
-	return (0);	
+	return (0);
 }

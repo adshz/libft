@@ -3,23 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhong <szhong@student.42london.com>       +#+  +:+       +#+        */
+/*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 16:33:59 by szhong            #+#    #+#             */
-/*   Updated: 2023/09/12 17:26:45 by szhong           ###   ########.fr       */
+/*   Created: 2023/10/30 17:46:16 by szhong            #+#    #+#             */
+/*   Updated: 2023/11/16 20:05:08 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	int	result;
-
-	result = 0;
-	if (c >= 'a' && c <= 'z')
-		result = 1;
-	else if (c >= 'A' && c <= 'Z')
-		result = 1;
-	else if (c >= 48 && c <= 57)	
-		result = 1;
-	return (result);
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }
