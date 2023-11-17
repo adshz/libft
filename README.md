@@ -6,12 +6,6 @@ The first project in 42 school during the common core is that we are going to re
 
 ## Metholodgy 
 
-### ChatGPT
-I decide to code every day for 2 hours. My requirement is not only to write them out, but also will record videos (<3m) for practicing reasoning. 
-
-Since ChatGPT revolutionalize the way we learn, I will use it to help me get better at explaning. First, I will ask ChatGPT to provide a few examples about how to use a certain functions. For example, I don't know about `memset`, I will ask ChatGPT provides some examples and usecases. Then, I can type them out to get the feeling of it. Later, I will think about how to design the `ft_memset` on my own. 
-The key thing is not to ask ChatGPT to write code but ask it to assist me and explain the code to me.
-
 ### Usecase collection
 On the other hand, I have been roughly following some courses on coursera. The hard problem still has values. For example, I was aksed to write a C program to convert inputs of values from one measurement to another measure. i.e. 10 meters to 32.8084 feet. I was stuck in writing them; but I quickly googled some questions such as "how to extract numbers from a string in C" and "how to extract alphabets from a string in C". 
 
