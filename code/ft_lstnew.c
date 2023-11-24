@@ -6,17 +6,19 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:55:50 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/15 23:05:34 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/20 20:59:46 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*
- *typedef struct s_list
- {
- 	void	*content;
-	struct s_list *next;
- } t_list;
- * */
+
+/**
+ * @brief Creates a new list node with the given content.
+ *
+ * Allocates and initializes a new list node with the specified @p content.
+ *
+ * @param content The content to be stored in the new node.
+ * @return A pointer to the new list node or NULL on failure.
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
@@ -24,17 +26,7 @@ t_list	*ft_lstnew(void *content)
 	node = malloc(sizeof(t_list));
 	if (node == NULL)
 		return (NULL);
-	node -> content = content;
-	node -> next = NULL;
+	node->content = content;
+	node->next = NULL;
 	return (node);
-}/*
-
-int	main()
-{
-//	char	s[] = "Hello world";
-	int	i = 567;
-	t_list	*node;
-
-	node = ft_lstnew(&i);
-	ft_putnbr_fd(*((int *)(node->content)), 1);
-}*/
+}

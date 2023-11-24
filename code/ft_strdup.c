@@ -6,11 +6,17 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 01:13:04 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/09 15:04:30 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/20 21:10:40 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include "libft.h"
+#include "libft.h"
 
+/**
+ * @brief Duplicates a string.
+ *
+ * @param s The string to duplicate.
+ * @return A pointer to the duplicated string, or NULL on failure.
+ */
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
@@ -18,10 +24,14 @@ char	*ft_strdup(const char *s)
 
 	dup = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (dup == NULL)
+	{
 		return (NULL);
+	}
 	ptr = dup;
 	while (*s)
+	{
 		*ptr++ = *s++;
+	}
 	*ptr = '\0';
 	return (dup);
 }

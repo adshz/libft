@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2023/11/15 17:27:07 by szhong           ###   ########.fr        #
+#    Updated: 2023/11/20 20:12:17 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ AR		:= ar -rcs
 
 RM		:= rm -rf
 
-MANDATORY	= ft_memset.c \
+MANDATORY	:= ft_memset.c \
 		  ft_bzero.c \
 		  ft_memcpy.c \
 		  ft_memmove.c \
@@ -53,7 +53,7 @@ MANDATORY	= ft_memset.c \
 		  ft_putnbr_fd.c \
 		  ft_striteri.c	  
 
-BONUS		= ft_lstnew.c \
+BONUS		:= ft_lstnew.c \
 		  ft_lstadd_front.c \
 		  ft_lstsize.c \
 		  ft_lstlast.c \
@@ -79,7 +79,7 @@ bonus:		$(OBJS_BONUS)
 all:		$(NAME) bonus
 
 clean:
-		$(RM) $(OBJS) $(OBJ_BONUS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:		clean
 		$(RM) $(NAME)
@@ -87,4 +87,3 @@ fclean:		clean
 re:		fclean all
 
 .PHONY:		all clean fclean re bonus
-		

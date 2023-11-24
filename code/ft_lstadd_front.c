@@ -6,24 +6,22 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:59:49 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/17 19:42:26 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/20 20:53:00 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/*typedef struct s_list 
- * {
- *	void	*content;
- *	struct s_list	*next;
- * } t_list;
+/**
+ * @brief Adds a new element to the front of the linked list.
  *
+ * This function adds the element @p new to the front of the linked list
+ * pointed to by @p lst.
  *
- *
- *  lst : address of a pointer to the first link of a list
- * */
+ * @param lst A pointer to a pointer to the first element of the linked list.
+ * @param new The new element to add to the front of the linked list.
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-//	new -> content	==> int new_value;
 	if (!new)
 		return ;
 	if (!lst)

@@ -6,16 +6,20 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:05:38 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/17 20:12:44 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/20 21:30:42 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file libft.h
+ * @brief Library containing various utility functions,
+ * 	  a linked list implementation.
+ */
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
-
 
 # define FT_INT_MAX 2147483647
 # define FT_INT_MIN (-2147483648)
@@ -65,11 +69,13 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strdup(const char *s);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_itoa(int n);
+char				*ft_strtrim(char const *s1, char const *set);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				**ft_split(char const *s, char c);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
+		void (*del)(void *));
 #endif

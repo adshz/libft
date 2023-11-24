@@ -6,11 +6,19 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:04:58 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/13 16:53:53 by szhong           ###   ########.fr       */
+/*   Updated: 2023/11/20 21:06:13 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
+/**
+ * @brief Writes an integer to the specified file descriptor.
+ *
+ * Writes the integer @p n to the file descriptor @p fd.
+ *
+ * @param n The integer to write.
+ * @param fd The file descriptor to write to.
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbl;
