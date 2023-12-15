@@ -1,8 +1,8 @@
-# Libft (library of Functions)
+# Libft (library of 42)
 
 ## Introduction
 
-The first project in 42 school during the common core is that we are going to re-create library of function in C. Many people may think it is unnecessary to do that as so-called "don't reinvent the wheel". In contract, we are not trying to outperform the C library by previous creators but we rather train ourselves to be able to navigate the C code base. I was listening to an [interview](https://www.youtube.com/watch?v=OVwJ5EMTSK0&) where Dr.Chunk mentioned a phenomenon that many bootcamp graduates can't create a library fron the ground up because they didn't learn that way "I only know React framework" so I can't..." That's the key difference between a bootcamp graduate and a formal training in 42 school. We learn how to learn by starting anything from the scratch. It's called Seek First. 
+The first project in 42 school during the common core is that we are going to re-create library of function in C. Many people may think it is unnecessary to do that as so-called "don't reinvent the wheel". In contract, we are not trying to outperform the C library by previous creators but we rather train ourselves to be able to navigate the C code base. I was listening to an [interview](https://www.youtube.com/watch?v=OVwJ5EMTSK0&) where Dr.Chunk mentioned a phenomenon that many bootcamp graduates can't create a library fron the ground up because they didn't learn that way "I only know React framework" so I can't..." That's the key difference between a bootcamp graduate and 42 school graduates. We learn how to learn by starting anything from the scratch. It's called Seek First. 
 
 ## Metholodgy 
 
