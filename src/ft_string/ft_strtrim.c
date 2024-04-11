@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:31:29 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Trim leading and trailing characters from a string.

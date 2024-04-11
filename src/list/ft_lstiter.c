@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:56:59 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_list.h"
 
 /**
  * @brief Iterates through the linked list, applying a function to each element.

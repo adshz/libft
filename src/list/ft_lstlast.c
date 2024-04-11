@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:57:33 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_list.h"
 
 /**
  * @brief Returns the last element of the linked list.

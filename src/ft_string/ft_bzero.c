@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:40:03 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Sets the first n bytes of the memory area pointed to by s to zero.

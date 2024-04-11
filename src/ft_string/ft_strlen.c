@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:14:54 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Calculates the length of a string.

@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:58:56 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_list.h"
 
 /**
  * @brief Creates a new linked list by applying a function to each element.

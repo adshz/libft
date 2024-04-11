@@ -9,7 +9,7 @@
 /*   Updated: 2023/09/06 13:24:50 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Swaps the values of two integers.

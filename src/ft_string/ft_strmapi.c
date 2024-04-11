@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:15:28 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Applies a function to each character of a string.

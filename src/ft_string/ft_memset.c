@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:04:37 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Sets the first n bytes of a memory block to a specified value.

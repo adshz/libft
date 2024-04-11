@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:12:18 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Concatenates two strings.

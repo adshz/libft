@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:03:51 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Moves n bytes from source to destination memory, handling overlap.

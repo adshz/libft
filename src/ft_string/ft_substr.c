@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:20:46 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_string.h"
 
 /**
  * @brief Creates a substring of a string starting from the specified index.
