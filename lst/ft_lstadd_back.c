@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:52:28 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Adds a new element to the end of the linked list.

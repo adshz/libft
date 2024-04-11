@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:44:30 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Allocates and initialises a block of memory.

@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:55:48 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Clears the linked list, applying a deletion function to each element.

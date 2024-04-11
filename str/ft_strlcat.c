@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:12:53 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Concatenates strings with size restriction.

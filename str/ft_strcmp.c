@@ -9,7 +9,7 @@
 /*   Updated: 2024/04/11 14:09:48 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Compares two strings.

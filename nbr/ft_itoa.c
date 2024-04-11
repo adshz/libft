@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:51:54 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Calculates the length of the digits in an integer.

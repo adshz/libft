@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 20:39:10 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 /**
  * @brief Converts a string to an integer.
  *

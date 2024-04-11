@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:06:49 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Writes a string to the specified file descriptor.

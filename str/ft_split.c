@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:08:29 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Counts the number of words in a string separated by a delimiter.

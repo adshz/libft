@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:01:38 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Locates the first occurrence of a byte in a memory block.

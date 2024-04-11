@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:02:57 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Copies n bytes from source to destination memory.

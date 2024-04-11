@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:19:56 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Finds the last occurrence of a character in a string.

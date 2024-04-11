@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:02:18 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../libft.h"
 
 /**
  * @brief Compares the first n bytes of two memory blocks.
