@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_nbr.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 19:42:37 by szhong            #+#    #+#             */
-/*   Updated: 2024/04/11 18:07:41 by szhong           ###   ########.fr       */
+/*   Created: 2024/04/11 19:07:35 by szhong            #+#    #+#             */
+/*   Updated: 2024/04/11 19:10:20 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_string"
-/**
- * @brief Converts a lowercase letter to its uppercase equivalent.
- *        If @p c is not a lowercase letter, it returns @p c unchanged.
- * @return The uppercase equivalent of @p c if it's a lowercase letter; 
- * 	   otherwise, returns @p c.
- */
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-	{
-		c -= 32;
-	}
-	return (c);
-}
+
+#ifndef FT_NBR_H
+# define FT_NBR_H
+
+long double	ft_pow(long double n, unsigned int pow);
+void		ft_swap(int *a, int *b);
+int			ft_is_prime(int nb);
+int			*ft_range(int min, int max);
+int			ft_sqrt(int nb);
+
+#endif

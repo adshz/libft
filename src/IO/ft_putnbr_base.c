@@ -6,7 +6,7 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 07:44:36 by szhong            #+#    #+#             */
-/*   Updated: 2024/04/11 15:30:23 by szhong           ###   ########.fr       */
+/*   Updated: 2024/04/11 18:11:11 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_io.h"
@@ -21,7 +21,7 @@
  * @param nbl The negative number to be handled.
  * @param base The base to be used for the conversion.
  */
-void	negative_handle(long int nbl, char *base)
+static void	negative_handle(long int nbl, char *base)
 {
 	if (nbl == -2147483648)
 	{
@@ -47,7 +47,7 @@ void	negative_handle(long int nbl, char *base)
  * @param base The base string to be checked.
  * @return 1 if the base contains invalid characters, 0 otherwise.
  */
-int	ft_notbase(char *base)
+static int	ft_notbase(char *base)
 {
 	unsigned int	i;
 
@@ -72,7 +72,7 @@ int	ft_notbase(char *base)
  * @return 1 if the string contains duplicate or invalid characters, 
  	   0 otherwise.
  */
-int	ft_notallowed(char *str, unsigned int len)
+static int	ft_notallowed(char *str, unsigned int len)
 {
 	unsigned int	i;
 	unsigned int	j;

@@ -6,10 +6,10 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:56:12 by szhong            #+#    #+#             */
-/*   Updated: 2023/11/20 21:22:18 by szhong           ###   ########.fr       */
+/*   Updated: 2024/04/11 18:07:54 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "ft_string.h"
 /**
  * @brief Converts an uppercase letter to lowercase.
  *

@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_stdlib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 19:42:37 by szhong            #+#    #+#             */
-/*   Updated: 2024/04/11 18:07:41 by szhong           ###   ########.fr       */
+/*   Created: 2024/04/11 17:52:20 by szhong            #+#    #+#             */
+/*   Updated: 2024/04/11 18:48:23 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_string"
-/**
- * @brief Converts a lowercase letter to its uppercase equivalent.
- *        If @p c is not a lowercase letter, it returns @p c unchanged.
- * @return The uppercase equivalent of @p c if it's a lowercase letter; 
- * 	   otherwise, returns @p c.
- */
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-	{
-		c -= 32;
-	}
-	return (c);
-}
+
+#ifndef FT_STDLIB_H
+# define FT_STDLIB_H
+
+# include <stddef.h>
+# include <stdint.h>
+
+char	*ft_itoa(int n);
+void	*ft_calloc(size_t nmemb, size_t size);
+int		ft_atoi(const char *str);
+
+#endif
