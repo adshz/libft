@@ -9,7 +9,7 @@
 /*   Updated: 2024/04/11 15:30:23 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_io.h"
 
 /**
  * @brief Handles the negative number case for ft_putnbr_base.

@@ -9,7 +9,7 @@
 /*   Updated: 2023/09/06 12:52:22 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "ft_io.h"
 
 /**
  * @brief Writes a character to the standard output.
