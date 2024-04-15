@@ -9,7 +9,8 @@
 /*   Updated: 2023/11/20 20:56:23 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_list.h"
+#include "list.h"
+#include <stdlib.h>
 
 /**
  * @brief Deletes a single element from the linked list.

@@ -9,7 +9,8 @@
 /*   Updated: 2023/11/20 20:59:46 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_list.h"
+#include "list.h"
+#include <stdlib.h>
 
 /**
  * @brief Creates a new list node with the given content.

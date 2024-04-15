@@ -9,8 +9,8 @@
 /*   Updated: 2023/11/20 20:52:28 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_list.h"
-
+#include "list.h"
+#include <stdlib.h>
 /**
  * @brief Adds a new element to the end of the linked list.
  *

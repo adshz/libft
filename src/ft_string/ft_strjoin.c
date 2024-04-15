@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_string.h"
+#include <stdlib.h>
 
 /**
  * @brief Concatenates two strings.

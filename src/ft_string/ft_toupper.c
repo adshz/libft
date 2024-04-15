@@ -9,7 +9,7 @@
 /*   Updated: 2024/04/11 18:07:41 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_string"
+#include "ft_string.h"
 /**
  * @brief Converts a lowercase letter to its uppercase equivalent.
  *        If @p c is not a lowercase letter, it returns @p c unchanged.

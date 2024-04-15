@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/20 21:00:59 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_list.h"
+#include "list.h"
 
 /**
  * @brief Returns the size of a linked list.

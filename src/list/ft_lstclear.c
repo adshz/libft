@@ -9,7 +9,8 @@
 /*   Updated: 2023/11/20 20:55:48 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_list.h"
+#include "list.h"
+#include <stdlib.h>
 
 /**
  * @brief Clears the linked list, applying a deletion function to each element.

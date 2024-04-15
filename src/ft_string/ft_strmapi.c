@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_string.h"
+#include <stdlib.h>
 
 /**
  * @brief Applies a function to each character of a string.

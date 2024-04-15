@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_io.h"
+#include "ft_string.h"
 
 /**
  * @brief Writes a string followed by a newline to the specified file descriptor.

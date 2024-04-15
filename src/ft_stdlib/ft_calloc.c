@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_stdlib.h"
+#include "ft_string.h"
+#include <stdlib.h>
 
 /**
  * @brief Allocates and initialises a block of memory.

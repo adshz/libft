@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_stdlib.h"
+#include <stdlib.h>
 
 /**
  * @brief Calculates the length of the digits in an integer.

@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_string.h"
+#include <stdlib.h>
 
 /**
  * @brief Creates a substring of a string starting from the specified index.

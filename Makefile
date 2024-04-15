@@ -10,6 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Define colour
+DEFAULT = \033[0;39m
+GRAY = \033[0;90m
+RED = \033[0;91m
+GREEN = \033[0;92m
+MAGENTA = \033[0;95m
+YELLOW = \033[0;93m
+CYAN =\033[0;96m
+WHITE = \033[0;97m
+BOLD = \033[91m
+
 NAME		:= libft.a
 CC		:= cc
 CFLAGS		:= -Wall -Wextra -Werror
@@ -18,72 +29,80 @@ AR		:= ar -rcs
 
 RM		:= rm -rf
 
-MANDATORY	:= ft_memset.c \
-		  ft_bzero.c \
-		  ft_memcpy.c \
-		  ft_memmove.c \
-		  ft_memchr.c \
-		  ft_memcmp.c \
-		  ft_strlen.c \
-		  ft_isalpha.c \
-		  ft_isdigit.c \
-		  ft_isalnum.c \
-		  ft_isascii.c \
-		  ft_isprint.c \
-		  ft_toupper.c \
-		  ft_tolower.c \
-		  ft_strchr.c \
-		  ft_strrchr.c \
-		  ft_strncmp.c \
-		  ft_strlcpy.c \
-		  ft_strlcat.c \
-		  ft_strnstr.c \
-		  ft_atoi.c \
-		  ft_calloc.c \
-		  ft_strdup.c \
-		  ft_substr.c \
-		  ft_strjoin.c \
-		  ft_strtrim.c \
-		  ft_split.c \
-		  ft_itoa.c \
-		  ft_strmapi.c \
-		  ft_putchar_fd.c \
-		  ft_putstr_fd.c\
-		  ft_putendl_fd.c \
-		  ft_putnbr_fd.c \
-		  ft_striteri.c	  
+INCLUDE			=	inc
+SRC_DIR			=	src
+SRC	:= \
+		  ft_string/ft_memset \
+		  ft_string/ft_bzero \
+		  ft_string/ft_memcpy \
+		  ft_string/ft_memmove \
+		  ft_string/ft_memchr \
+		  ft_string/ft_memcmp \
+		  ft_string/ft_strlen \
+		  ft_ctype/ft_isalpha \
+		  ft_ctype/ft_isdigit \
+		  ft_ctype/ft_isxdigit \
+		  ft_ctype/ft_isalnum \
+		  ft_ctype/ft_isascii \
+		  ft_ctype/ft_isprint \
+		  ft_string/ft_toupper \
+		  ft_string/ft_tolower \
+		  ft_string/ft_strchr \
+		  ft_string/ft_strrchr \
+		  ft_string/ft_strncmp \
+		  ft_string/ft_strlcpy \
+		  ft_string/ft_strlcat \
+		  ft_string/ft_strnstr \
+		  ft_stdlib/ft_atoi \
+		  ft_stdlib/ft_calloc \
+		  ft_string/ft_strdup \
+		  ft_string/ft_substr \
+		  ft_string/ft_strjoin \
+		  ft_string/ft_strtrim \
+		  ft_string/ft_split \
+		  ft_stdlib/ft_itoa \
+		  ft_string/ft_strmapi \
+		  IO/ft_putchar_fd \
+		  IO/ft_putstr_fd \
+		  IO/ft_putendl_fd \
+		  IO/ft_putnbr_fd \
+		  ft_string/ft_striteri \
+		  list/ft_lstnew \
+		  list/ft_lstadd_front \
+		  list/ft_lstsize \
+		  list/ft_lstlast \
+		  list/ft_lstadd_back \
+		  list/ft_lstdelone \
+		  list/ft_lstclear \
+		  list/ft_lstiter \
+		  list/ft_lstmap
 
-BONUS		:= ft_lstnew.c \
-		  ft_lstadd_front.c \
-		  ft_lstsize.c \
-		  ft_lstlast.c \
-		  ft_lstadd_back.c \
-		  ft_lstdelone.c \
-		  ft_lstclear.c \
-		  ft_lstiter.c \
-		  ft_lstmap.c
+SRCS 			=	$(addsuffix .c, $(SRC))
 
-OBJS		:= $(MANDATORY:.c=.o)
+OBJ_DIR			=	obj
+OBJS			=	$(SRCS:%.c=$(OBJ_DIR)/%.o)
 
-OBJS_BONUS	:= $(BONUS:.c=.o)
+$(OBJ_DIR)/%.o:		$(SRC_DIR)/%.c | $(OBJ_DIR)
+			@mkdir -p $(dir $@) 
+			@$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
-%.o:		%.c
-			$(CC) $(CFLAGS) -c $< -o $@
+all:$(NAME)
 
-$(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
+$(NAME):	$(OBJ_DIR) $(OBJS)
+		@$(AR) $(ARFLAGS) $(OBJS)
+		@echo "$(YELLOW)[LIBFT] $(GREEN)Build Completed!$(DEFAULT)"
 
-bonus:		$(OBJS_BONUS)
-		$(AR) $(NAME) $(OBJS_BONUS)
-
-all:		$(NAME) bonus
+$(OBJ_DIR):
+		@mkdir -p $(OBJ_DIR)
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+		@$(RM) $(OBJ_DIR)
+		@echo "$(YELLOW)[LIBFT] $(GREEN)Objects Removed$(DEFAULT)"
 
 fclean:		clean
 		$(RM) $(NAME)
+		@echo "$(YELLOW)[LIBFT] $(GREEN)$(NAME) Removed$(DEFAULT)"
 
 re:		fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re

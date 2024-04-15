@@ -12,6 +12,7 @@
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
+# include "ft_stdlib.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);

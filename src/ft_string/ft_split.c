@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_string.h"
+#include <stdlib.h>
 
 /**
  * @brief Counts the number of words in a string separated by a delimiter.
