@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_nbr.h"
-
+#include <stdlib.h>
 /**
  * @brief Generates an array of integers within a given range.
  *
