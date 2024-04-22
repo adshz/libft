@@ -30,86 +30,85 @@ AR		:= ar -rc
 RM		:= rm -rf
 
 INCLUDE			=	./inc
-SRC_DIR			=	src
-SRC	:= \
-		  ft_string/ft_bzero \
-		  ft_string/ft_memchr \
-		  ft_string/ft_memcmp \
-		  ft_string/ft_memcpy \
-		  ft_string/ft_memmove \
-		  ft_string/ft_memset \
-		  ft_string/ft_split \
-		  ft_string/ft_strchr \
-		  ft_string/ft_strcmp \
-		  ft_string/ft_strdup \
-		  ft_string/ft_striteri \
-		  ft_string/ft_strjoin \
-		  ft_string/ft_strlcat \
-		  ft_string/ft_strlcpy \
-		  ft_string/ft_strlen \
-		  ft_string/ft_strmapi \
-		  ft_string/ft_strncmp \
-		  ft_string/ft_strnstr \
-		  ft_string/ft_strrchr \
-		  ft_string/ft_strstr \
-		  ft_string/ft_strtrim \
-		  ft_string/ft_substr \
-		  ft_string/ft_tolower \
-		  ft_string/ft_toupper \
-		  IO/ft_putchar \
-		  IO/ft_putchar_fd \
-		  IO/ft_putendl_fd \
-		  IO/ft_putnbr_base \
-		  IO/ft_putnbr_fd \
-		  IO/ft_putstr_fd \
-		  ft_ctype/ft_isalnum \
-		  ft_ctype/ft_isalpha \
-		  ft_ctype/ft_isascii \
-		  ft_ctype/ft_isblank \
-		  ft_ctype/ft_iscntrl \
-		  ft_ctype/ft_isdigit \
-		  ft_ctype/ft_islower \
-		  ft_ctype/ft_isprint \
-		  ft_ctype/ft_ispunct \
-		  ft_ctype/ft_isspace \
-		  ft_ctype/ft_isupper \
-		  ft_ctype/ft_isxdigit \
-		  ft_stdlib/ft_atoi \
-		  ft_stdlib/ft_calloc \
-		  ft_stdlib/ft_itoa \
-		  gnl/get_next_line_bonus \
-		  gnl/get_next_line_utils_bonus \
-		  nbr/ft_is_prime \
-		  nbr/ft_pow \
-		  nbr/ft_range \
-		  nbr/ft_sqrt \
-		  nbr/ft_swap \
-		  list/ft_lstadd_back \
-		  list/ft_lstadd_front \
-		  list/ft_lstclear \
-		  list/ft_lstdelone \
-		  list/ft_lstiter \
-		  list/ft_lstlast \
-		  list/ft_lstmap \
-		  list/ft_lstnew \
-		  list/ft_lstsize
+SRC_DIR			=	./src
+SRCS	:= \
+		  ft_string/ft_bzero.c \
+		  ft_string/ft_memchr.c \
+		  ft_string/ft_memcmp.c \
+		  ft_string/ft_memcpy.c \
+		  ft_string/ft_memmove.c \
+		  ft_string/ft_memset.c \
+		  ft_string/ft_split.c \
+		  ft_string/ft_strchr.c \
+		  ft_string/ft_strcmp.c \
+		  ft_string/ft_strdup.c \
+		  ft_string/ft_striteri.c \
+		  ft_string/ft_strjoin.c \
+		  ft_string/ft_strlcat.c \
+		  ft_string/ft_strlcpy.c \
+		  ft_string/ft_strlen.c \
+		  ft_string/ft_strmapi.c \
+		  ft_string/ft_strncmp.c \
+		  ft_string/ft_strnstr.c \
+		  ft_string/ft_strrchr.c \
+		  ft_string/ft_strstr.c \
+		  ft_string/ft_strtrim.c \
+		  ft_string/ft_substr.c \
+		  ft_string/ft_tolower.c \
+		  ft_string/ft_toupper.c \
+		  IO/ft_putchar.c \
+		  IO/ft_putchar_fd.c \
+		  IO/ft_putendl_fd.c \
+		  IO/ft_putnbr_base.c \
+		  IO/ft_putnbr_fd.c \
+		  IO/ft_putstr_fd.c \
+		  ft_ctype/ft_isalnum.c \
+		  ft_ctype/ft_isalpha.c \
+		  ft_ctype/ft_isascii.c \
+		  ft_ctype/ft_isblank.c \
+		  ft_ctype/ft_iscntrl.c \
+		  ft_ctype/ft_isdigit.c \
+		  ft_ctype/ft_islower.c \
+		  ft_ctype/ft_isprint.c \
+		  ft_ctype/ft_ispunct.c \
+		  ft_ctype/ft_isspace.c \
+		  ft_ctype/ft_isupper.c \
+		  ft_ctype/ft_isxdigit.c \
+		  ft_stdlib/ft_atoi.c \
+		  ft_stdlib/ft_calloc.c \
+		  ft_stdlib/ft_itoa.c \
+		  gnl/get_next_line_bonus.c \
+		  gnl/get_next_line_utils_bonus.c \
+		  nbr/ft_is_prime.c \
+		  nbr/ft_pow.c \
+		  nbr/ft_range.c \
+		  nbr/ft_sqrt.c \
+		  nbr/ft_swap.c \
+		  list/ft_lstadd_back.c \
+		  list/ft_lstadd_front.c \
+		  list/ft_lstclear.c \
+		  list/ft_lstdelone.c \
+		  list/ft_lstiter.c \
+		  list/ft_lstlast.c \
+		  list/ft_lstmap.c \
+		  list/ft_lstnew.c \
+		  list/ft_lstsize.c
 
 
-SRCS 			=	$(addsuffix .c, $(SRC))
 
-OBJ_DIR			=	obj
+OBJ_DIR			=	./obj
 OBJS = $(patsubst %c,%o,$(SRCS))
 
-$(OBJ_DIR)/%.o:		$(SRC_DIR)/%.c 
-			@mkdir -p $(dir $@) 
-			$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 all:$(NAME)
 
 $(NAME):	$(addprefix $(OBJ_DIR)/, $(OBJS))
-		@$(AR) $(ARFLAGS) $(NAME) $(addprefix $(OBJ_DIR)/, $(OBJS))
+		@$(AR) $(NAME) $(addprefix $(OBJ_DIR)/, $(OBJS))
 		@echo "$(YELLOW)[LIBFT] $(GREEN)Build Completed!$(DEFAULT)"
 
+$(OBJ_DIR)/%.o:		$(SRC_DIR)/%.c 
+			@mkdir -p $(@D)
+			@$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
 		@$(RM) $(OBJ_DIR)
