@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2023/11/20 20:12:17 by szhong           ###   ########.fr        #
+#    Updated: 2024/04/23 10:01:51 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,7 +115,7 @@ clean:
 		@echo "$(YELLOW)[LIBFT] $(GREEN)Objects Removed$(DEFAULT)"
 
 fclean:		clean
-		$(RM) $(NAME)
+		@$(RM) $(NAME)
 		@echo "$(YELLOW)[LIBFT] $(GREEN)$(NAME) Removed$(DEFAULT)"
 
 re:		fclean all
