@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2024/04/23 10:01:51 by szhong           ###   ########.fr        #
+#    Updated: 2024/04/24 17:41:43 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,8 +77,6 @@ SRCS	:= \
 		  ft_stdlib/ft_atoi.c \
 		  ft_stdlib/ft_calloc.c \
 		  ft_stdlib/ft_itoa.c \
-		  gnl/get_next_line_bonus.c \
-		  gnl/get_next_line_utils_bonus.c \
 		  nbr/ft_is_prime.c \
 		  nbr/ft_pow.c \
 		  nbr/ft_range.c \
@@ -92,8 +90,19 @@ SRCS	:= \
 		  list/ft_lstlast.c \
 		  list/ft_lstmap.c \
 		  list/ft_lstnew.c \
-		  list/ft_lstsize.c
-
+		  list/ft_lstsize.c \
+		  gnl/get_next_line_bonus.c \
+		  gnl/get_next_line_utils_bonus.c \
+		  ft_printf/ft_printf.c \
+		  ft_printf/base_utils.c \
+		  ft_printf/buf_mgr.c \
+		  ft_printf/parser.c \
+		  ft_printf/render_char.c \
+		  ft_printf/render_fmt.c \
+		  ft_printf/render_int.c \
+		  ft_printf/render_str.c \
+		  ft_printf/set_pad_space.c \
+		  ft_printf/set_pad_zero.c 
 
 
 OBJ_DIR			=	./obj

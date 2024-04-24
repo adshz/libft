@@ -6,7 +6,7 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:24:20 by szhong            #+#    #+#             */
-/*   Updated: 2024/01/09 18:12:36 by szhong           ###   ########.fr       */
+/*   Updated: 2024/04/24 17:45:38 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
@@ -35,9 +35,9 @@ char	*get_next_line(int fd)
 	char		*result;
 	static char	*extra_buff[1024];
 
-	if (fd > 1023 || fd < 0 || BUFFER_SIZE <= 0)
+	if (fd > 1023 || fd < 0 || BUFFER <= 0)
 		return (NULL);
-	buff = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
+	buff = (char *)malloc((BUFFER + 1) * sizeof(char));
 	if (buff == NULL)
 		return (NULL);
 	stash = init_stash(&(extra_buff[fd]));
@@ -82,7 +82,7 @@ static	char	*init_stash(char **extra_buff)
  * @brief Read and extract data from the file descriptor into the stash.
  *
  * This function reads data from the specified file descriptor (fd) into
- * the buffer (`buff`) with a maximum size of BUFFER_SIZE, appending
+ * the buffer (`buff`) with a maximum size of BUFFER, appending
  * the read data to stash that may contain partial content from previous calls.
  *
  * @param fd	The file descriptor to read from.
@@ -97,7 +97,7 @@ static char	*read_and_extract(int fd, char *stash, char *buff)
 	ssize_t		bytes;
 	char		*temp;
 
-	bytes = read(fd, buff, BUFFER_SIZE);
+	bytes = read(fd, buff, BUFFER);
 	if (bytes <= 0)
 		return (NULL);
 	buff[bytes] = '\0';

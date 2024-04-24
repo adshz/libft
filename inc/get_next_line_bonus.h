@@ -6,14 +6,14 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:24:40 by szhong            #+#    #+#             */
-/*   Updated: 2023/12/13 11:13:36 by szhong           ###   ########.fr       */
+/*   Updated: 2024/04/24 17:44:23 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+# ifndef BUFFER
+#  define BUFFER 10
 # endif
 
 # include <stdlib.h>
