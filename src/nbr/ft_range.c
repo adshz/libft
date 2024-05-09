@@ -37,6 +37,8 @@ int	*ft_range(int min, int max)
 		return (nullptr);
 	size = max - min;
 	result = (int *)malloc(sizeof(int) * size);
+	if (result == NULL)
+		return (0);
 	while (i < size)
 	{
 		result[i] = min + i;
