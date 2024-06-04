@@ -138,7 +138,7 @@ command 'python' from deb python-is-python3
 
 try `pip --version` to see if you have pip manager installed
 
-if you see the pathway output in the terminal you can install norminette `pip nstall norminette`
+if you see the pathway output in the terminal you can install norminette `pip install norminette`
 
 you can start to test it by `norminete ft_strlen` to see the familiar thing...
 
