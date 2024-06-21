@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2024/04/24 17:41:43 by szhong           ###   ########.fr        #
+#    Updated: 2024/06/21 15:01:33 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,15 +82,20 @@ SRCS	:= \
 		  nbr/ft_range.c \
 		  nbr/ft_sqrt.c \
 		  nbr/ft_swap.c \
-		  list/ft_lstadd_back.c \
-		  list/ft_lstadd_front.c \
-		  list/ft_lstclear.c \
-		  list/ft_lstdelone.c \
-		  list/ft_lstiter.c \
-		  list/ft_lstlast.c \
-		  list/ft_lstmap.c \
-		  list/ft_lstnew.c \
-		  list/ft_lstsize.c \
+		  list/singly/ft_lstadd_back.c \
+		  list/singly/ft_lstadd_front.c \
+		  list/singly/ft_lstclear.c \
+		  list/singly/ft_lstdelone.c \
+		  list/singly/ft_lstiter.c \
+		  list/singly/ft_lstlast.c \
+		  list/singly/ft_lstmap.c \
+		  list/singly/ft_lstnew.c \
+		  list/singly/ft_lstsize.c \
+		  list/doubly/ft_dblst_delnode.c \
+		  list/doubly/ft_dblst_new.c \
+		  list/doubly/ft_dblst_size.c \
+		  list/doubly/ft_dblstadd_back.c \
+		  list/doubly/ft_dblstadd_front.c \
 		  gnl/get_next_line_bonus.c \
 		  gnl/get_next_line_utils_bonus.c \
 		  ft_printf/ft_printf.c \
