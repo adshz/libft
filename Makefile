@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2024/06/21 15:01:33 by szhong           ###   ########.fr        #
+#    Updated: 2024/06/25 14:32:00 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,11 +126,11 @@ $(OBJ_DIR)/%.o:		$(SRC_DIR)/%.c
 
 clean:
 		@$(RM) $(OBJ_DIR)
-		@echo "$(YELLOW)[LIBFT] $(GREEN)Objects Removed$(DEFAULT)"
+		@echo "$(CYAN)[LIBFT] Objects Removed$(DEFAULT)"
 
 fclean:		clean
 		@$(RM) $(NAME)
-		@echo "$(YELLOW)[LIBFT] $(GREEN)$(NAME) Removed$(DEFAULT)"
+		@echo "$(CYAN)[LIBFT] $(NAME) Removed$(DEFAULT)"
 
 re:		fclean all
 
