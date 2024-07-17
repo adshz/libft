@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2024/06/25 14:32:00 by szhong           ###   ########.fr        #
+#    Updated: 2024/07/15 16:01:16 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ BOLD = \033[91m
 
 NAME		:= libft.a
 CC		:= cc
-CFLAGS		:= -Wall -Wextra -Werror
+CFLAGS		:= -Wall -Wextra -Werror -g
 
 AR		:= ar -rcs
 
@@ -96,8 +96,8 @@ SRCS	:= \
 		  list/doubly/ft_dblst_size.c \
 		  list/doubly/ft_dblstadd_back.c \
 		  list/doubly/ft_dblstadd_front.c \
-		  gnl/get_next_line_bonus.c \
-		  gnl/get_next_line_utils_bonus.c \
+		  gnl/get_next_line.c \
+		  gnl/get_next_line_utils.c \
 		  ft_printf/ft_printf.c \
 		  ft_printf/base_utils.c \
 		  ft_printf/buf_mgr.c \

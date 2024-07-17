@@ -1,15 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:24:29 by szhong            #+#    #+#             */
-/*   Updated: 2024/01/09 18:46:59 by szhong           ###   ########.fr       */
+/*   Updated: 2024/07/17 10:59:23 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 /**
  * @brief Locate the first occurrence of a character in a string.
@@ -123,7 +123,7 @@ char	*get_strjoin(char const *s1, char const *s2)
 	char	*ptr_str;
 
 	if (!s1 || !s2)
-		return (0);
+		return (NULL);
 	total_size = get_strlen((char *)s1) + get_strlen((char *)s2) + 1;
 	str = (char *)malloc(total_size * sizeof(char));
 	if (!str)

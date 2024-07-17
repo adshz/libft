@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:24:20 by szhong            #+#    #+#             */
-/*   Updated: 2024/04/24 17:45:38 by szhong           ###   ########.fr       */
+/*   Updated: 2024/07/17 11:40:06 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 static char	*init_stash(char **extra_buff);
-static char	*read_and_extract(int fd, char *stash, char *buff);
+static char	*read_and_extract(int fd, char *stash);
 static char	*clean_stash(char *stash, char **extra_buff);
-static void	free_up(char *stash, char *buff);
+static int	read_data_handler(char **stash, char **buff);
 
 /**
  * @brief Read the next line from a file descriptor
@@ -30,27 +30,21 @@ static void	free_up(char *stash, char *buff);
  */
 char	*get_next_line(int fd)
 {
-	char		*buff;
 	char		*stash;
 	char		*result;
 	static char	*extra_buff[1024];
 
 	if (fd > 1023 || fd < 0 || BUFFER <= 0)
 		return (NULL);
-	buff = (char *)malloc((BUFFER + 1) * sizeof(char));
-	if (buff == NULL)
-		return (NULL);
 	stash = init_stash(&(extra_buff[fd]));
-	while (1)
+	stash = read_and_extract(fd, stash);
+	if (!stash)
 	{
-		if (stash && get_strchr(stash, '\n'))
-			break ;
-		stash = read_and_extract(fd, stash, buff);
-		if (!stash || get_strchr(stash, '\n'))
-			break ;
+		free(extra_buff[fd]);
+		extra_buff[fd] = NULL;
+		return (NULL);
 	}
 	result = clean_stash(stash, &(extra_buff[fd]));
-	free_up(stash, buff);
 	return (result);
 }
 
@@ -87,30 +81,30 @@ static	char	*init_stash(char **extra_buff)
  *
  * @param fd	The file descriptor to read from.
  * @param stash	A pointer to char to store content from the file descriptor.
- * @param buff	A pointer to temporarily store data from the read function.
  * @return	A pointer to the updated stash. NULL if an error occurs or
  * 		the end of the file is reached. If nothing to read from the fd,
  * 		the original stash is returned.
  */
-static char	*read_and_extract(int fd, char *stash, char *buff)
+static char	*read_and_extract(int fd, char *stash)
 {
 	ssize_t		bytes;
-	char		*temp;
+	char		*buff;
 
-	bytes = read(fd, buff, BUFFER);
-	if (bytes <= 0)
+	buff = (char *)malloc((BUFFER + 1) * sizeof(char));
+	if (buff == NULL)
 		return (NULL);
-	buff[bytes] = '\0';
-	if (!stash)
+	while (!get_strchr(stash, '\n'))
 	{
-		stash = get_strdup(buff);
+		bytes = read(fd, buff, BUFFER);
+		if (bytes <= 0)
+			break ;
+		buff[bytes] = '\0';
+		if (read_data_handler(&stash, &buff) == STRJOIN_FAILED)
+			break ;
+		if (!stash)
+			break ;
 	}
-	else
-	{
-		temp = stash;
-		stash = get_strjoin(temp, buff);
-		free(temp);
-	}
+	free(buff);
 	return (stash);
 }
 
@@ -143,20 +137,42 @@ static char	*clean_stash(char *stash, char **extra_buff)
 	else if (stash)
 	{
 		result = get_strdup(stash);
+		free(*extra_buff);
+		*extra_buff = NULL;
 	}
+	free(stash);
 	return (result);
 }
 
 /**
- * @brief Free memory allocated for stash and buff.
+ * @brief Joining each stash to form the entire sentence.
  *
- * This function releases the memory allocated for the stash and buff parameters.
+ * This function evaluates and operate either joining two strings
+ * or duplicate from buff to the stash
  *
- * @param stash A pointer to memory allocated for storing content.
- * @param buff  A pointer to memory allocated for temporary data storage.
+ * @param **stash	A double pointer to char containing content.
+ * @param **buff	A double pointer to store  any characters
+ * 			after the read() function.
+ * @return		if 1 it is get_strjoin() fails and temp assigned 
+ * 			to a NULL pointer
+ * 			1 is the value 
  */
-static void	free_up(char *stash, char *buff)
+static int	read_data_handler(char **stash, char **buff)
 {
-	free(stash);
-	free(buff);
+	char	*temp;
+
+	temp = *stash;
+	if (temp)
+	{
+		*stash = get_strjoin(temp, *buff);
+		if (!*stash)
+		{
+			free(temp);
+			return (STRJOIN_FAILED);
+		}
+		free(temp);
+	}
+	else
+		*stash = get_strdup(*buff);
+	return (0);
 }
