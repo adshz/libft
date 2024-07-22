@@ -6,7 +6,7 @@
 #    By: szhong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:46:51 by szhong            #+#    #+#              #
-#    Updated: 2024/07/15 16:01:16 by szhong           ###   ########.fr        #
+#    Updated: 2024/07/22 16:15:33 by szhong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRCS	:= \
 		  ft_ctype/ft_isupper.c \
 		  ft_ctype/ft_isxdigit.c \
 		  ft_stdlib/ft_atoi.c \
+		  ft_stdlib/ft_atoi_base.c \
 		  ft_stdlib/ft_calloc.c \
 		  ft_stdlib/ft_itoa.c \
 		  nbr/ft_is_prime.c \
