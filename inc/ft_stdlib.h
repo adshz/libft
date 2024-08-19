@@ -6,7 +6,7 @@
 /*   By: szhong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:52:20 by szhong            #+#    #+#             */
-/*   Updated: 2024/07/22 16:14:47 by szhong           ###   ########.fr       */
+/*   Updated: 2024/08/19 18:59:30 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ char	*ft_itoa(int n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_atoi(const char *str);
 int		ft_atoi_base(char *str, char *base);
+long	ft_atol(const char *str);
 
 #endif
