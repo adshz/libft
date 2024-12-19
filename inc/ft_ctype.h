@@ -25,4 +25,5 @@ int	ft_ispunct(int c);
 int	ft_isspace(int c);
 int	ft_isupper(int c);
 int	ft_isxdigit(int c);
+int	ft_isnumber(const char *str);
 #endif
