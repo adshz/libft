@@ -74,6 +74,7 @@ SRCS	:= \
 		  ft_ctype/ft_isspace.c \
 		  ft_ctype/ft_isupper.c \
 		  ft_ctype/ft_isxdigit.c \
+		  ft_ctype/ft_isnumber.c \
 		  ft_stdlib/ft_atoi.c \
 		  ft_stdlib/ft_atoi_base.c \
 		  ft_stdlib/ft_calloc.c \
