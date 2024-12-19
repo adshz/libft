@@ -9,7 +9,7 @@
 /*   Updated: 2024/12/18 15:51:23 by szhong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "ft_ctype.h"
 
 int	ft_isnumber(const char *str)
 {
